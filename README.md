@@ -17,7 +17,7 @@ logstash_ver: "1.3.2"
 Dependencies
 ------------
 
-None
+Suggested roles: bennojoy.redis - valentinogagliardi.rsyslog-server
 
 License
 -------
