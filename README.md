@@ -11,8 +11,9 @@ Logstash need a JVM. For your peace this role include an installation of OpenJDK
 Role Variables
 --------------
 
-logstash_url: "https://download.elasticsearch.org/logstash/logstash/logstash"
-logstash_ver: "1.3.2"
+	logstash_url: "https://download.elasticsearch.org/logstash/logstash/logstash" # Logstash Download Url
+
+	logstash_ver: "1.3.2"							      # Logstash Version	
 
 Dependencies
 ------------
