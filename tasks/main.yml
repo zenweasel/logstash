@@ -1,0 +1,6 @@
+---
+# tasks file for logstash
+- include: openjdk.yml
+- include: logstash_install.yml
+- include: logstash_configure.yml
+

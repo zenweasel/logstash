@@ -1,0 +1,20 @@
+- name: Create main Logstash Directory
+  file: path="/etc/logstash.d" owner=root group=root mode=0755 state=directory
+
+- name: Create Logstash Redis Configuration Directory
+  file: path="/etc/logstash.d/redis" owner=root group=root mode=0755 state=directory
+
+- name: Create Logstash elasticsearch Directory
+  file: path="/etc/logstash.d/elasticsearch" owner=root group=root mode=0755 state=directory
+
+- name: Create Logstash Redis Input Configuration
+  template: src=input_log2redis.conf.j2 dest="/etc/logstash.d/redis/input_log2redis.conf" owner=root group=root mode=0644
+
+- name: Create Logstash Redis Filters Configuration
+  template: src=filters_log2redis.conf.j2 dest="/etc/logstash.d/redis/filters_log2redis.conf" owner=root group=root mode=0644
+
+- name: Create Logstash Redis Output Configuration
+  template: src=output_log2redis.conf.j2 dest="/etc/logstash.d/redis/output_log2redis.conf" owner=root group=root mode=0644
+
+- name: Create Logstash Elasticsearch Configuration
+  template: src=redis2elasticsearch.conf.j2 dest="/etc/logstash.d/elasticsearch/redis2elasticsearch.conf" owner=root group=root mode=0644
